@@ -1,42 +1,41 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Intro p5.js</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Intro p5.js</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-
-  <style type="text/css">
-    body{
-        text-align: center;
-        background-color: lightslategray;
-        color: black;
-    }
-    h3{
-        font-size: 25px !important;
-        width: 35%;
-    }
-    canvas{
-  	    border:1px solid black;
-    }
-    hr{
-        height: 4px;
-        background-color: black;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-	    <h3 class="btn btn-primary">Mask Editor</h3>
-	    <hr>
-        <label>Use the mask images below to edit your camera with a mask edition:</label>
+        <h3 class="btn btn-primary">Mask Editor</h3>
+        <hr id="heading_underline">
+        <label>Use the mask images below to edit your camera with a mask edition, then click the "Take Snapshot" button:
+            <br>
+            <br>
+            <br>
+            Note: Position yourself in a way that the mask looks like it is directly on top of you. You need to do this as the mask will not position itself for you.
+        </label>
+        <br>
+        <button class="btn btn-success" onclick="take_snapshot()">Take Snapshot</button>
         <br>
         <br>
-        <img src="bear-mask.png" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid;">
-        <img src="cat-mask.png" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid"
+        <img src="bear-mask.png" onclick="change_image1()" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid;">
+        <img src="cat-mask.png" onclick="change_image2()" width="60px" height="60px" style="background-color: black; border: white 2px solid;">
+        <img src="dog-mask.png" onclick="change_image3()" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid;">
+        <img src="lion-mask.png" onclick="change_image4()" width="60px" height="60px" style="background-color: black; border: white 2px solid;">
+        <img src="elephant-mask.png" onclick="change_image5()" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid;">
+        <img src="tiger-mask.png" onclick="change_image6()" width="60px" height="60px" style="background-color: black; border: white 2px solid;">
+        <img src="fox-mask.png" onclick="change_image7()" width="60px" height="60px" style="background-color: lightblue; border: black 2px solid;">
+        <img src="rabbit-mask.png" onclick="change_image8()" width="60px" height="60px" style="background-color: black; border: white 2px solid;">
     </div>
+<script src="main.js"></script>
+</body>
+</html>
